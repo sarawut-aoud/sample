@@ -43,37 +43,15 @@
 
     <!-- Page wrapper start -->
     <div class="wrapper">
-        <!-- Top navbr start -->
-        {top_navbar}
-        <!--Top navbr End -->
-
-        <!-- left_sidebar start -->
-        {left_sidebar}
-        <!--left_sidebar End -->
-
-        <div class="content-wrapper" style="min-height: 817px;">
-            <!-- breadcrumb_list Starts -->
-            <div class="breadcrumb-container">
-                {breadcrumb_list}
-            </div>
-            <!-- breadcrumb_list End -->
-
-            <div class="main-container">
-                <section class="content">
-                    <!-- Page content start -->
-                    {page_content}
-                    <!-- Page content End -->
-                </section>
-            </div>
+        <div class="main-container">
+            <section class="content">
+                <!-- Page content start -->
+                {page_content}
+                <!-- Page content End -->
+            </section>
         </div>
-
         <!-- App footer -->
-        <footer class="main-footer">
-            <span>Copyright © All rights reserved.</span>
-            <div class="float-right d-none d-sm-inline-block">
-                <b>Version</b> 3.2.0
-            </div>
-        </footer>
+       
     </div>
 
 
@@ -99,6 +77,7 @@
     <script src="{base_url}assets/js/Sortable.js"></script>
 
     <script src="{base_url}assets/dist/js/adminlte.js?ft=<?= date('His') ?>"></script>
+    <!-- <script src="{base_url}assets/dist/js/pages/dashboard.js"></script> -->
     <!-- Main java Script -->
     <script src="{base_url}assets/js/ci_utilities.js?ft=<?= date('His') ?>"></script>
 
@@ -109,13 +88,6 @@
         var csrf_cookie_name = '{csrf_cookie_name}';
         localStorage.setItem('lang_js', '<?= $this->session->userdata('language'); ?>')
         $.widget.bridge('uibutton', $.ui.button)
-
-
-        OverlayScrollbars($('#menu-sidebar')[0], {
-            overflow: {
-                x: 'hidden',
-            },
-        });
     </script>
 
     {another_js}

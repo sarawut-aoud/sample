@@ -1,33 +1,38 @@
 <aside class="main-sidebar sidebar-dark-primary ">
-    <div class="sidebar-application">
-
+    <div class="sidebar-application text-color">
+        <div class="image">
+            <img src="{base_url}assets/images/121.png" alt="">
+        </div>
+        <div class="text-application">
+            ระบบ..........
+        </div>
     </div>
 
     <div class="menu-sidebar sidebar-sticky" id="menu-sidebar">
         <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
             <li class="nav-item">
-                <a href="#" class="nav-link">
+                <a href="#" class="nav-link text-color">
                     <i class="nav-icon fas fa-tachometer-alt"></i>
-                    <p>
+                    <p class="">
                         Dashboard
                         <i class="right fas fa-angle-left"></i>
                     </p>
                 </a>
                 <ul class="nav nav-treeview" style="display: none;">
                     <li class="nav-item">
-                        <a href="../../index.html" class="nav-link">
+                        <a href="../../index.html" class="nav-link text-color">
                             <i class="far fa-circle nav-icon"></i>
                             <p>Dashboard v1</p>
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a href="../../index2.html" class="nav-link">
+                        <a href="../../index2.html" class="nav-link text-color">
                             <i class="far fa-circle nav-icon"></i>
                             <p>Dashboard v2</p>
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a href="../../index3.html" class="nav-link">
+                        <a href="../../index3.html" class="nav-link text-color">
                             <i class="far fa-circle nav-icon"></i>
                             <p>Dashboard v3</p>
                         </a>

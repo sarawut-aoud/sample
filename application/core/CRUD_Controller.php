@@ -90,9 +90,15 @@ class CRUD_Controller extends CI_Controller
 		$this->data['left_sidebar'] = $this->parser->parse('template/master/left_sidebar_view', $this->left_sidebar_data, TRUE);
 		$this->data['breadcrumb_list'] = $this->parser->parse('template/master/breadcrumb_view', $this->breadcrumb_data, TRUE);
 		$this->data['page_content'] = $this->parser->parse_repeat($path, $this->data, TRUE);
-		$this->data['page_content'] = $this->parser->parse_repeat($path, $this->data, TRUE);
 		$this->data['another_css'] = $this->another_css;
 		$this->data['another_js'] = $this->another_js;
 		$this->parser->parse('template/master/homepage_view', $this->data);
+	}
+	protected function render_main($path)
+	{
+		$this->data['page_content'] = $this->parser->parse_repeat($path, $this->data, TRUE);
+		$this->data['another_css'] = $this->another_css;
+		$this->data['another_js'] = $this->another_js;
+		$this->parser->parse('master_view', $this->data);
 	}
 }

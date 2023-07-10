@@ -1,3 +1,16 @@
 :root {
+	--primary-color: #06283d;
+	--primary-2-color: #1363df;
+	--primary-3-color: #47b5ff;
+	--text-color: #dff6ff;
+
+	--success-color: #26b321;
+	--warning-color: #ffe604;
+	--danger-color: #ff2525;
+	--info-color: #28c2ff;
+	--dark-color: #222222;
+	--dark-small-color: #b3b3b3;
+
 	--font-color: #252525;
+	--box-shadow: 0 1px 4px 0 #939393;
 }

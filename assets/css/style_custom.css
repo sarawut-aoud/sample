@@ -1,6 +1,6 @@
 @font-face {
 	font-family: "hrmMitr";
-	src: url("/fonts/Mitr/Mitr-ExtraLight.ttf") format("truetype");
+	src: url("../../fonts/Mitr/Mitr-ExtraLight.ttf") format("truetype");
 	font-weight: 200;
 	font-style: normal;
 	font-display: swap;
@@ -8,7 +8,7 @@
 
 @font-face {
 	font-family: "hrmMitr";
-	src: url("/fonts/Mitr/Mitr-Light.ttf") format("truetype");
+	src: url("../../fonts/Mitr/Mitr-Light.ttf") format("truetype");
 	font-weight: 300;
 	font-style: normal;
 	font-display: swap;
@@ -16,7 +16,7 @@
 
 @font-face {
 	font-family: "hrmMitr";
-	src: url("/fonts/Mitr/Mitr-Regular.ttf") format("truetype");
+	src: url("../../fonts/Mitr/Mitr-Regular.ttf") format("truetype");
 	font-weight: 400;
 	font-style: normal;
 	font-display: swap;
@@ -24,7 +24,7 @@
 
 @font-face {
 	font-family: "hrmMitr";
-	src: url("/fonts/Mitr/Mitr-Medium.ttf") format("truetype");
+	src: url("../../fonts/Mitr/Mitr-Medium.ttf") format("truetype");
 	font-weight: 500;
 	font-style: normal;
 	font-display: swap;
@@ -32,7 +32,7 @@
 
 @font-face {
 	font-family: "hrmMitr";
-	src: url("/fonts/Mitr/Mitr-SemiBold.ttf") format("truetype");
+	src: url("../../fonts/Mitr/Mitr-SemiBold.ttf") format("truetype");
 	font-weight: 600;
 	font-style: normal;
 	font-display: swap;
@@ -40,7 +40,7 @@
 
 @font-face {
 	font-family: "hrmMitr";
-	src: url("/fonts/Mitr/Mitr-Bold.ttf") format("truetype");
+	src: url("../../fonts/Mitr/Mitr-Bold.ttf") format("truetype");
 	font-weight: 700;
 	font-style: normal;
 	font-display: swap;
@@ -49,8 +49,13 @@
 body {
 	font-family: "hrmMitr", sans-serif !important;
 	letter-spacing: -0.5px !important;
-	font-size: 16px;
+	font-size: 16px !important;
 }
+/* main */
+.text-color * {
+	color: var(--text-color);
+}
+
 .menu-sidebar {
 	display: flex;
 	flex-direction: column;
@@ -59,8 +64,26 @@ body {
 	/* overflow: auto; */
 }
 .sidebar-application {
+	display: flex;
+	gap: 1rem;
 	height: 95px;
+	justify-content: center;
+	padding: 1rem;
+	align-items: center;
 }
+.sidebar-application .image {
+	width: 50px;
+}
+.sidebar-application .image > img {
+	width: 100%;
+}
+.sidebar-dark-primary {
+	background: var(--primary-color);
+}
+.menu-sidebar .nav-pills {
+	padding: 1rem;
+}
+
 .os-theme-dark > .os-scrollbar > .os-scrollbar-track > .os-scrollbar-handle {
 	background: rgb(255 255 255 / 40%) !important;
 }
@@ -79,4 +102,41 @@ body {
 	width: 100%;
 	flex-direction: column;
 	align-items: center;
+}
+
+/* topnavbar */
+.main-header {
+	justify-content: end;
+	padding-inline: 10px;
+}
+.header-profile {
+	display: flex;
+	gap: 1rem;
+}
+.header-profile .content-text {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-end;
+}
+.header-profile .image {
+	width: 45px;
+	position: relative;
+}
+.header-profile .circle-online {
+	position: absolute;
+	top: -5px;
+	right: -5px;
+}
+.header-profile .circle-online.online {
+	color: var(--success-color);
+}
+.header-profile .circle-online.offline {
+	color: var(--dark-small-color);
+}
+
+.header-profile .image > .image-rounded {
+	width: 100%;
+	border-radius: 50%;
+	box-shadow: var(--box-shadow);
+	cursor: pointer;
 }
