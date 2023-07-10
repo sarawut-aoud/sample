@@ -25,7 +25,7 @@
     <link rel="stylesheet" href="{base_url}assets/plugins/overlayScrollbars/css/OverlayScrollbars.min.css">
 
     <!-- Main Css -->
-    <link rel="stylesheet" href="{base_url}assets/dist/css/adminlte.min.css">
+    <link rel="stylesheet" href="{base_url}assets/dist/master.min.css">
 
     <link rel="stylesheet" href="{base_url}assets/css/_var_main.css">
     <link rel="stylesheet" href="{base_url}assets/css/style_custom.css">
@@ -35,25 +35,23 @@
 
 </head>
 
-<body class="sidebar-mini sidebar-open">
-
-    <div class="preloader flex-column justify-content-center align-items-center" style="height: 0px;">
-        <img class="animation__shake" src="#" alt="AdminLTELogo" height="60" width="60" style="display: none;">
-    </div>
-
+<body>
     <!-- Page wrapper start -->
-    <div class="wrapper">
-        <div class="main-container">
-            <section class="content">
-                <!-- Page content start -->
-                {page_content}
-                <!-- Page content End -->
-            </section>
-        </div>
-        <!-- App footer -->
-       
-    </div>
+    <div id="wrapper">
 
+        <!-- Content Wrapper -->
+        <div id="content-wrapper" class="d-flex flex-column">
+            <!-- Main Content -->
+            <div id="content">
+                <!-- Begin Page Content -->
+                <div class="main-container">
+                    {page_content}
+                </div>
+                <!-- Begin Page Content -->
+            </div>
+
+        </div>
+    </div>
 
     <!-- jquery -->
     <script src="{base_url}assets/js/jquery-3.6.0.min.js"></script>
@@ -75,8 +73,8 @@
 
     <!-- Sortable -->
     <script src="{base_url}assets/js/Sortable.js"></script>
+    <script src="{base_url}assets/dist/master.min.js"></script>
 
-    <script src="{base_url}assets/dist/js/adminlte.js?ft=<?= date('His') ?>"></script>
     <!-- <script src="{base_url}assets/dist/js/pages/dashboard.js"></script> -->
     <!-- Main java Script -->
     <script src="{base_url}assets/js/ci_utilities.js?ft=<?= date('His') ?>"></script>

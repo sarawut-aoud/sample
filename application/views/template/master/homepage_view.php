@@ -25,8 +25,8 @@
     <link rel="stylesheet" href="{base_url}assets/plugins/overlayScrollbars/css/OverlayScrollbars.min.css">
 
     <!-- Main Css -->
-    <link rel="stylesheet" href="{base_url}assets/dist/css/adminlte.min.css">
 
+    <link rel="stylesheet" href="{base_url}assets/dist/master.min.css">
     <link rel="stylesheet" href="{base_url}assets/css/_var_main.css">
     <link rel="stylesheet" href="{base_url}assets/css/style_custom.css">
 
@@ -35,52 +35,51 @@
 
 </head>
 
-<body class="sidebar-mini sidebar-open">
-
-    <div class="preloader flex-column justify-content-center align-items-center" style="height: 0px;">
-        <img class="animation__shake" src="#" alt="AdminLTELogo" height="60" width="60" style="display: none;">
-    </div>
-
+<body id="page-top">
     <!-- Page wrapper start -->
-    <div class="wrapper">
-        <!-- Top navbr start -->
-        {top_navbar}
-        <!--Top navbr End -->
-
-        <!-- left_sidebar start -->
+    <div id="wrapper">
+        <!-- Sidebar start -->
         {left_sidebar}
-        <!--left_sidebar End -->
+        <!--Sidebar End -->
+        <!-- Content Wrapper -->
+        <div id="content-wrapper" class="d-flex flex-column">
+            <!-- Main Content -->
+            <div id="content">
+                {top_navbar}
+                <!-- Begin Page Content -->
+                <div class="container-fluid">
+                    <!-- breadcrumb_list Starts -->
+                    <div class="breadcrumb-container">
+                        {breadcrumb_list}
+                    </div>
+                    <!-- breadcrumb_list End -->
+                    <div class="main-container">
+                        {page_content}
+                    </div>
 
-        <div class="content-wrapper" style="min-height: 817px;">
-            <!-- breadcrumb_list Starts -->
-            <div class="breadcrumb-container">
-                {breadcrumb_list}
+                </div>
+                <!-- Begin Page Content -->
             </div>
-            <!-- breadcrumb_list End -->
 
-            <div class="main-container">
-                <section class="content">
-                    <!-- Page content start -->
-                    {page_content}
-                    <!-- Page content End -->
-                </section>
-            </div>
+            <!-- App footer -->
+            <footer class="sticky-footer bg-white">
+                <div class="container my-auto">
+                    <div class="copyright text-center my-auto">
+                        <span>Copyright © Your Website 2021</span>
+                    </div>
+                </div>
+            </footer>
         </div>
-
-        <!-- App footer -->
-        <footer class="main-footer">
-            <span>Copyright © All rights reserved.</span>
-            <div class="float-right d-none d-sm-inline-block">
-                <b>Version</b> 3.2.0
-            </div>
-        </footer>
     </div>
-
+    <a class="scroll-to-top rounded" href="#page-top" style="display: inline;">
+        <i class="fas fa-angle-up"></i>
+    </a>
 
     <!-- jquery -->
     <script src="{base_url}assets/js/jquery-3.6.0.min.js"></script>
     <script src="{base_url}assets/js/jquery-ui.min.js"></script>
     <script src="{base_url}assets/js/jquery.cookie.min.js"></script>
+    <script src="{base_url}assets/dist/jquery.easing.min.js"></script>
 
     <!-- bootstap 5 -->
     <script src="{base_url}assets/js/bootstrap.bundle.min.js"></script>
@@ -98,7 +97,9 @@
     <!-- Sortable -->
     <script src="{base_url}assets/js/Sortable.js"></script>
 
-    <script src="{base_url}assets/dist/js/adminlte.js?ft=<?= date('His') ?>"></script>
+    <script src="{base_url}assets/dist/master.min.js"></script>
+
+
     <!-- Main java Script -->
     <script src="{base_url}assets/js/ci_utilities.js?ft=<?= date('His') ?>"></script>
 
@@ -116,6 +117,9 @@
                 x: 'hidden',
             },
         });
+
+        
+       
     </script>
 
     {another_js}
