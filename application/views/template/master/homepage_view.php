@@ -160,7 +160,7 @@
             <!-- Main Content -->
             <div id="content">
                 <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
-                    <div class="d-flex justify-content-between w-100 align-items-center">
+                    <div class="d-flex w-100 align-items-center">
                         <div class="breadcrumb-container">
                             {breadcrumb_list}
                         </div>

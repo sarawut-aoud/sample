@@ -1,4 +1,7 @@
-<ul class="navbar-nav">
+<button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
+    <i class="fa fa-bars"></i>
+</button>
+<ul class="navbar-nav ms-auto">
     <!-- Nav Item - Search Dropdown (Visible Only XS) -->
     <li class="nav-item dropdown no-arrow d-sm-none">
         <!-- Dropdown - Messages -->
@@ -72,7 +75,11 @@
     <!-- Nav Item - User Information -->
     <li class="nav-item dropdown no-arrow">
         <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            <span class="mr-2 d-none d-lg-inline text-gray-600 small"> Sarawut Aoudkla</span>
+            <div class="d-flex flex-column gap-1 justify-content-end align-items-end">
+                <span class="mr-2 d-none d-lg-inline text-gray-600 small"> Sarawut Aoudkla</span>
+                <span class="mr-2 d-none d-lg-inline text-gray-600 small"> Programer</span>
+            </div>
+
             <img class="img-profile rounded-circle" src="{base_url}/assets/images/IMG_7638.jpg">
         </a>
         <!-- Dropdown - User Information -->

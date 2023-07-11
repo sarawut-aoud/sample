@@ -1,4 +1,4 @@
-<div class="content-header">
+<div class="content-header d-none d-lg-inline">
     <div class="container-fluid">
         <div class="row ">
             <ol class="breadcrumb m-0">
