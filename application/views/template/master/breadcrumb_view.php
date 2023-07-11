@@ -1,9 +1,10 @@
 <div class="content-header">
     <div class="container-fluid">
-        <div class="row mb-2">
-            <ol class="breadcrumb ">
-                <li class="breadcrumb-item"><a href="#">Home</a></li>
-                <li class="breadcrumb-item active">Dashboard v1</li>
+        <div class="row ">
+            <ol class="breadcrumb m-0">
+                <?php foreach ($breadcrumb as $key => $val) : ?>
+                    <li class="breadcrumb-item <?= $val['class'] ?>"><a href="<?= $val['ref'] ?>"><?= $val['name'] ?></a></li>
+                <?php endforeach; ?>
             </ol>
         </div>
     </div>

@@ -159,13 +159,23 @@
         <div id="content-wrapper" class="d-flex flex-column">
             <!-- Main Content -->
             <div id="content">
-                {top_navbar}
+                <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
+                    <div class="d-flex justify-content-between w-100 align-items-center">
+                        <div class="breadcrumb-container">
+                            {breadcrumb_list}
+                        </div>
+                        <!-- Topbar Navbar -->
+                        {top_navbar}
+                    </div>
+
+
+                </nav>
+
+
                 <!-- Begin Page Content -->
                 <div class="container-fluid">
                     <!-- breadcrumb_list Starts -->
-                    <div class="breadcrumb-container">
-                        {breadcrumb_list}
-                    </div>
+
                     <!-- breadcrumb_list End -->
                     <div class="main-container">
                         {page_content}
@@ -179,16 +189,13 @@
             <footer class="sticky-footer bg-white">
                 <div class="container my-auto">
                     <div class="copyright text-center my-auto">
-                        <span>Copyright © Your Website 2021</span>
+                        <span>Copyright © {application_varsion}</span>
                     </div>
                 </div>
             </footer>
         </div>
     </div>
-    <a class="scroll-to-top rounded" href="#page-top" style="display: inline;">
-        <i class="fas fa-angle-up"></i>
-    </a>
-
+    
     <!-- jquery -->
     <script src="{base_url}assets/js/jquery-3.6.0.min.js"></script>
     <script src="{base_url}assets/js/jquery-ui.min.js"></script>

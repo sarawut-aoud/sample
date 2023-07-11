@@ -55,6 +55,33 @@ body {
 .text-color * {
 	color: var(--text-color);
 }
+.card-show-content {
+	cursor: pointer;
+	transition: all 350ms;
+}
+.animeted-zoom {
+	cursor: pointer;
+	transition: all 350ms;
+}
+.card-show-content:hover .animeted-zoom,
+.animeted-zoom:hover {
+	transform: scale(1.2);
+}
+a:hover {
+	text-decoration: unset;
+}
+.font-sm {
+	font-size: 12px;
+}
+.font-m {
+	font-size: 14px;
+}
+.font-lg {
+	font-size: 16px;
+}
+.font-xl {
+	font-size: 18px;
+}
 /* button */
 .btn-outline-primary {
 	color: var(--text-color);
@@ -154,8 +181,44 @@ body {
 .menu-profile {
 	width: 240px !important;
 	font-size: 16px !important;
+	padding: 10px;
 }
-
+.menu-profile .dropdown-item {
+	padding: 10px;
+	cursor: pointer;
+	transition: all 350ms;
+	border-radius: 1em;
+	display: grid;
+	grid-template-columns: 1fr 2fr;
+	gap: 1rem;
+	text-align: left;
+	align-items: center;
+}
+.menu-profile .dropdown-item:hover {
+	transform: translateX(10px);
+}
+.menu-profile .dropdown-item .icon {
+	justify-content: center;
+	align-items: center;
+	display: flex;
+	border-radius: 8px;
+	width: 100%;
+	padding: 0.5rem 1rem;
+}
+.menu-profile .dropdown-item .icon.primary{
+	border: 2px solid var(--primary-color);
+	color: var(--primary-color);
+}
+.menu-profile .dropdown-item .icon.danger {
+	border: 2px solid var(--danger-color);
+	color: var(--danger-color);
+}
+.breadcrumb-item a {
+	color: var(--dark-small-color);
+}
+.breadcrumb-item.active a {
+	color: var(--primary-color);
+}
 @media (min-width: 768px) {
 	.sidebar.toggled {
 		overflow: visible;

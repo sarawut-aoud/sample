@@ -14,6 +14,8 @@ class Home extends CRUD_Controller
     }
     public function preview()
     {
+
+        $this->setBread(['class' => '', 'ref' => base_url('home/preview'), 'name' => 'Home'], ['class' => 'active', 'ref' => '#', 'name' => 'Dashboard']);
         $this->renderview('home/view');
     }
 }

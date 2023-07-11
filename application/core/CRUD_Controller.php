@@ -15,10 +15,14 @@ class CRUD_Controller extends CI_Controller
 	public function __construct($database = '')
 	{
 		parent::__construct();
+		$this->breadcrumb_data = [];
 		$data['user_prefix_name']	= $this->session->userdata('user_prefix_name');
 		$data['user_fullname']		= $this->session->userdata('user_fullname');
 		$data['user_lastname']		= $this->session->userdata('user_lastname');
 		$data['title_html'] = 'SARAWUT : Online';
+		$data['application_name'] = 'SARAWUT';
+		$data['application_sub_name'] = 'Online';
+		$data['application_varsion'] = 'SARAWUT : Online ' . date('Y').'  Version 1.0 ';
 
 		$data['base_url'] = base_url();
 		$data['site_url'] = site_url();
@@ -84,14 +88,21 @@ class CRUD_Controller extends CI_Controller
 				return 'ERROR';
 		}
 	}
+	protected function setBread(...$list)
+	{
+		$this->breadcrumb_data['breadcrumb'] = $list;
+	}
+
 	protected function renderview($path)
 	{
+
 		$this->data['top_navbar'] = $this->parser->parse('template/master/top_navbar_view', $this->top_navbar_data, TRUE);
 		$this->data['left_sidebar'] = $this->parser->parse('template/master/left_sidebar_view', $this->left_sidebar_data, TRUE);
 		$this->data['breadcrumb_list'] = $this->parser->parse('template/master/breadcrumb_view', $this->breadcrumb_data, TRUE);
 		$this->data['page_content'] = $this->parser->parse_repeat($path, $this->data, TRUE);
 		$this->data['another_css'] = $this->another_css;
 		$this->data['another_js'] = $this->another_js;
+
 		$this->parser->parse('template/master/homepage_view', $this->data);
 	}
 	protected function render_main($path)
