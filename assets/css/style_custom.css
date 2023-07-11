@@ -63,6 +63,9 @@ body {
 	cursor: pointer;
 	transition: all 350ms;
 }
+.card-show-content:hover{
+	transform: translateY(-5px);
+}
 .card-show-content:hover .animeted-zoom,
 .animeted-zoom:hover {
 	transform: scale(1.2);
