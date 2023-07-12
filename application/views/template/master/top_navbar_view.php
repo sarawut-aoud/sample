@@ -90,11 +90,9 @@
             </a>
 
             <div class="dropdown-divider"></div>
-            <a class="dropdown-item">
+            <a class="dropdown-item" href="{base_url}/process/logout">
                 <div class="icon danger"> <i class="fas fa-sign-out-alt fa-sm fa-fw "></i></div>
                 <div class="text">ออกจากระบบ</div>
-
-
             </a>
         </div>
     </li>

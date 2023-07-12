@@ -6,6 +6,7 @@ class Home extends CRUD_Controller
     public function __construct()
     {
         parent::__construct();
+       
     }
 
     public function index()
@@ -14,7 +15,8 @@ class Home extends CRUD_Controller
     }
     public function preview()
     {
-
+        $this->setJs('/assets/js/chart.js');
+        $this->setJs('/assets/js_modules/dashboard.js?ft=' . time());
         $this->setBread(['class' => '', 'ref' => base_url('home/preview'), 'name' => 'Home'], ['class' => 'active', 'ref' => '#', 'name' => 'Dashboard']);
         $this->renderview('home/view');
     }

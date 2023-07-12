@@ -18,8 +18,9 @@ class Process extends MY_Controller
     }
     public function Logout()
     {
-        $this->session->destroy();
-        redirect('login/login', 'refresh');
+        $this->session->sess_destroy();
+       
+        redirect('home', 'refresh');
     }
 }
 /*---------------------------- END Controller Class --------------------------------*/

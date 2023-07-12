@@ -16,13 +16,16 @@ class CRUD_Controller extends CI_Controller
 	{
 		parent::__construct();
 		$this->breadcrumb_data = [];
+
+
 		$data['user_prefix_name']	= $this->session->userdata('user_prefix_name');
 		$data['user_fullname']		= $this->session->userdata('user_fullname');
 		$data['user_lastname']		= $this->session->userdata('user_lastname');
 		$data['title_html'] = 'SARAWUT : Online';
 		$data['application_name'] = 'SARAWUT';
 		$data['application_sub_name'] = 'Online';
-		$data['application_varsion'] = 'SARAWUT : Online ' . date('Y').'  Version 1.0 ';
+		$data['application_varsion'] = 'SARAWUT : Online ' . date('Y') . '  Version 1.0 ';
+		$data['text_loading'] =  'L O A D I N G . . .';
 
 		$data['base_url'] = base_url();
 		$data['site_url'] = site_url();
@@ -101,8 +104,8 @@ class CRUD_Controller extends CI_Controller
 		$this->data['breadcrumb_list'] = $this->parser->parse('template/master/breadcrumb_view', $this->breadcrumb_data, TRUE);
 		$this->data['page_content'] = $this->parser->parse_repeat($path, $this->data, TRUE);
 		$this->data['another_css'] = $this->another_css;
-		$this->data['another_js'] = $this->another_js;
 
+		$this->data['another_js'] = $this->another_js;
 		$this->parser->parse('template/master/homepage_view', $this->data);
 	}
 	protected function render_main($path)
@@ -111,5 +114,13 @@ class CRUD_Controller extends CI_Controller
 		$this->data['another_css'] = $this->another_css;
 		$this->data['another_js'] = $this->another_js;
 		$this->parser->parse('master_view', $this->data);
+	}
+	protected function setJs($path)
+	{
+		$this->another_js .= '<script src="' . base_url($path) . '"></script>' . "\n\t";
+	}
+	protected function setCss($path)
+	{
+		$this->another_css .= '<link rel="stylesheet" href="' . base_url($path) . '">' . "\n\t";
 	}
 }
