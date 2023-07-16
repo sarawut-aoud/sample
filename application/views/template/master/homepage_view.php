@@ -95,9 +95,9 @@
             </div>
 
             <!-- App footer -->
-            <footer class="sticky-footer bg-white">
-                <div class="container my-auto">
-                    <div class="copyright text-center my-auto">
+            <footer class="sticky-footer bg-white ">
+                <div class="w-100 my-auto px-2">
+                    <div class="copyright text-end my-auto ">
                         <span>Copyright © {application_varsion}</span>
                     </div>
                 </div>
@@ -112,7 +112,7 @@
     <script src="{base_url}assets/dist/jquery.easing.min.js"></script>
 
     <!-- bootstap 5 -->
-    <script src="{base_url}assets/dist/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="{base_url}assets/js/bootstrap.bundle.min.js"></script>
     <!-- Sweetalert2 -->
     <script src="{base_url}assets/js/sweetalert2.all.min.js"></script>
 
